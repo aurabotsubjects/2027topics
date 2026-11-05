@@ -1,0 +1,87 @@
+/* ==========================================================
+   THE ROYAL ROAD — design tokens  ·  "Lapis, Gold & Clay"
+   Glazed brick · carved stone · parchment · gold foil · clay
+   (Engine token names are kept from The Fifth Codex so the shared
+    CSS keeps working; their values are re-mapped to Persia, §10.2.)
+   ========================================================== */
+:root{
+  /* ---- Persia palette (blueprint §10.2) ---- */
+  --parchment:#F1E1BE;
+  --ink:#2B1B10;
+  --lapis:#1E3A8A;
+  --lapis-deep:#0F1D4A;
+  --turq:#14B8A6;
+  --emerald:#0E9F6E;
+  --terracotta:#C2593A;
+  --saffron:#F59E0B;
+  --gold-leaf:#E8B84A;
+  --sand:#F4E3C1;
+  --crimson:#B0213B;
+  --night:#0B1024;
+  --clay:#B98A5E;
+  --stone:#D9CDB4;
+
+  /* ---- engine names, re-mapped ---- */
+  --obsidian:#0B1024;
+  --basalt:#1A2244;
+  --basalt-2:#26305A;
+  --amate:var(--parchment);
+  --amate-hi:#FBF3E0;
+  --amate-deep:#DCC79A;
+  --cacao:#5A4330;
+  --cacao-ink:var(--ink);
+  --jade:#0B7A55;
+  --jade-hi:#3FBF86;
+  --quetzal:#095E42;
+  --maya-blue:var(--lapis);
+  --maya-blue-hi:#8FA8F0;
+  --cochineal:var(--crimson);
+  --cochineal-hi:#E0566F;
+  --gold:var(--gold-leaf);
+  --gold-hi:#F6D27A;
+  --copper:#A9472C;
+  --copper-hi:#E07A58;
+  --spark:#FBE7B0;
+  --turquoise:var(--turq);
+  /* names used by the shared Hakatere-era CSS */
+  --wheat:var(--gold-hi);
+  --trig-red:var(--crimson);
+  --survey-paper:var(--parchment);
+
+  /* subject colourways (History lapis · Geography turquoise · Science emerald · Technology terracotta · Art saffron) */
+  --history:var(--lapis);
+  --geography:#0F7F74;
+  --science:#0B7A55;
+  --technology:#A9472C;
+  --art:#B9770A;
+
+  /* type */
+  --f-royal:"Cinzel", "Trajan Pro", "Times New Roman", serif;
+  --f-display:"Fraunces", "Iowan Old Style", Georgia, serif;
+  --f-label:"Big Shoulders Display", "Arial Narrow", Impact, sans-serif;
+  --f-body:"Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --f-mono:"JetBrains Mono", ui-monospace, Menlo, monospace;
+
+  --sh-1:0 1px 1px rgba(20,12,6,.22), 0 3px 6px -2px rgba(20,12,6,.25);
+  --sh-2:0 2px 2px rgba(20,12,6,.2), 0 8px 16px -6px rgba(20,12,6,.35), 0 18px 34px -18px rgba(20,12,6,.45);
+  --sh-3:0 3px 3px rgba(20,12,6,.18), 0 14px 28px -10px rgba(20,12,6,.42), 0 34px 60px -26px rgba(20,12,6,.55);
+  --sh-lift:0 4px 4px rgba(20,12,6,.16), 0 22px 40px -14px rgba(20,12,6,.5), 0 48px 80px -30px rgba(20,12,6,.55);
+
+  --ease-paper:cubic-bezier(.2,.8,.2,1);
+  --ease-lift:cubic-bezier(.34,1.4,.64,1);
+  --r:14px;
+
+  /* parchment grain — warm brown */
+  --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .32 0 0 0 0 .24 0 0 0 0 .14 0 0 0 .5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --fibre:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.012 .18' numOctaves='2' seed='4'/%3E%3CfeColorMatrix values='0 0 0 0 .36 0 0 0 0 .26 0 0 0 0 .14 0 0 0 .32 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23f)'/%3E%3C/svg%3E");
+  /* the Royal Road strip: a dotted road with gold rosette waystations (replaces the fret) */
+  --fret:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='24' viewBox='0 0 72 24'%3E%3Cpath d='M0 14h72' stroke='%23B98A5E' stroke-width='2.4' stroke-dasharray='5 5'/%3E%3Ccircle cx='36' cy='14' r='7' fill='%23E8B84A'/%3E%3Ccircle cx='36' cy='14' r='2.6' fill='%231E3A8A'/%3E%3Cg fill='%23F6D27A'%3E%3Ccircle cx='36' cy='6.5' r='1.6'/%3E%3Ccircle cx='36' cy='21.5' r='1.6'/%3E%3Ccircle cx='28.5' cy='14' r='1.6'/%3E%3Ccircle cx='43.5' cy='14' r='1.6'/%3E%3C/g%3E%3C/svg%3E");
+  /* faint glazed-brick grid */
+  --surveygrid:linear-gradient(rgba(232,184,74,.10) 1px, transparent 1px) 0 0/48px 24px, linear-gradient(90deg, rgba(232,184,74,.08) 1px, transparent 1px) 0 0/48px 48px;
+}
+
+/* reduced motion */
+.reduce-motion *{ animation-duration:.001s !important; animation-iteration-count:1 !important; transition-duration:.001s !important; }
+@media (prefers-reduced-motion: reduce){
+  :root:not(.force-motion) *{ animation-duration:.001s !important; animation-iteration-count:1 !important; transition-duration:.001s !important; }
+}

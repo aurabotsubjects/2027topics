@@ -34,6 +34,8 @@ table.dt th{ text-align:left; font-family:var(--f-label); font-weight:900; lette
 table.dt td{ padding:4px 6px; border:1px solid #e3d8cb; vertical-align:top; }
 table.dt td.t{ font-family:var(--f-label); font-weight:900; white-space:nowrap; color:var(--dc,#5A3825); font-size:9.5pt; }
 table.dt td.ph{ font-weight:700; white-space:nowrap; }
+table.dt td.wide{ font-weight:700; }
+table.dt td{ overflow-wrap:anywhere; }
 table.rub{ width:100%; border-collapse:collapse; font-size:9pt; table-layout:fixed; }
 table.rub th{ padding:6px; font-family:var(--f-label); font-weight:900; letter-spacing:.08em; text-transform:uppercase; font-size:8.6pt; color:#fff; border:1px solid #fff; }
 table.rub th.c0{ background:#5A3825; width:21%; text-align:left; }

@@ -230,7 +230,7 @@
     p2.appendChild(h("table", { class:"dt", style:{ fontSize:"7.6pt" } },
       h("thead", null, h("tr", null, ["Wk","Map sheet","Mon · History","Tue · Geog / SS","Wed · Science","Thu · Technology","Fri · Art","Lens"].map(x => h("th", null, x)))),
       h("tbody", null, T.weeks.map(w => h("tr", null, h("td", { class:"t" }, w.n), h("td", null, h("b", null, w.folio + " "), w.title), h("td", null, w.lessons.history), h("td", null, w.lessons.geography), h("td", null, w.lessons.science), h("td", null, w.lessons.technology), h("td", null, w.lessons.art), h("td", null, BM.PILLARS[w.pillar].name + " · " + w.text))))));
-    p2.appendChild(sec("2027 required content — where it is covered", h("table", { class:"dt" }, h("tbody", null, T.coverage.map(r => h("tr", null, h("td", null, r[0]), h("td", { class:"ph" }, r[1])))))));
+    p2.appendChild(sec("2027 required content — where it is covered", h("table", { class:"dt" }, h("tbody", null, T.coverage.map(r => h("tr", null, h("td", null, r[0]), h("td", { class:"wide" }, r[1])))))));
     p2.appendChild(h("p", { style:{ fontSize:"8pt", color:"#56646a" } }, "Science & Social Sciences: new NZ curriculum content required from 2027 (Years 0–8). Technology & The Arts: NZC 2007 Level 3 until the new content is compulsory. Confirm wording on Tāhūrangi before moderation. Hakatere is our local context, and it meets several named Years 5–6 requirements directly."));
     p2.appendChild(foot(fakeL, "unit plan p2"));
     const p3 = mk();
